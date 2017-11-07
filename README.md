@@ -164,5 +164,5 @@ private static class SerialExecutor implements Executor {
     
     
     通过以上扥分析也可以看出AsyncTask的执行顺序：onPreExecute——doInBackground——onProgressUpdate——onPostExecute，若是任务取消的话则会调用
-    onCancelled方法。
+    onCancelled方法。 
     
