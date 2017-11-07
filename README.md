@@ -150,7 +150,7 @@ AsyncTask执行需要注意的几点：
      * 否则调用onPostExecute返回结果主线程，  
      * 设置当前状态，结束，完整流程  
      */  
-   
+    
      private void finish(Result result) {
         if (isCancelled()) {
             onCancelled(result);
