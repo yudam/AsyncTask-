@@ -18,14 +18,10 @@ AsyncTask执行需要注意的几点：
     public final AsyncTask<Params, Progress, Result> executeOnExecutor(Executor exec,Params... params) {
         if (mStatus != Status.PENDING) {
         }
-      
-        mStatus = Status.RUNNING;
-
+        mStatus = Status.RUNNING;
         onPreExecute();
-
         mWorker.mParams = params;
         exec.execute(mFuture);
-
         return this;
     }
     
