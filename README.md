@@ -1,6 +1,11 @@
 # AsyncTask-
 Android开发艺术探索阅读笔记之：AsyncTask源码阅读  
 Time：2017年11月7日  
+
+#Note
+Asynctask 内部实现了两个线城池，sDefaultExecutor串行线程池用于任务的排队
+THREAD_POOL_EXECUTOR用于任务队列的执行
+         
 context：  
 AsyncTask异步任务执行类，在线程池中执行异步任务，返回结果到主线程更新UI，AsyncTask属于轻量级的异步任务类，不适合执行长时间耗时任务，建议使用线程池。 
 AsyncTask是一个抽象类，使用时需要我们去实现它的子类，默认需要三个参数：public abstract class AsyncTask<Params, Progress, Result> ，其中Params代表传入的参数，Progress代表进度，Result代表返回结果。  
